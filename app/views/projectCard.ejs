@@ -1,0 +1,11 @@
+<div class="col">
+  <div class="card m-2">
+    <div class="card-body" data-name="<%= name %>" data-created="<%= createdAt %>" data-updated="<%= updatedAt %>">
+      <h5 class="card-title text-truncate"><%= name %></h5>
+      <p id="public" class="card-text text-muted" data-public="<%- public %>"><%- public ? "Public" : "Private" %></p>
+      <a id="open" href="projects/<%= _id %>" class="card-link"><i class="fas fa-edit"></a>
+      <a id="copy" href="projects/<%= _id %>/copy" class="card-link"><i class="fas fa-copy"></i></a>
+      <a id="delete" href="deleteProject('/projects/<%= _id %>')" class="card-link"><i class="fas fa-trash text-danger"></i></a>
+    </div>
+  </div>
+</div>

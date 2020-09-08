@@ -1,0 +1,15 @@
+.logo {
+    height: 2em;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+#content {
+	resize: none;
+}
+
+main {
+	overflow-x: hidden;
+}
