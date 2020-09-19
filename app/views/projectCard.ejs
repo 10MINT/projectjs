@@ -1,11 +1,12 @@
-<div class="col">
-  <div class="card m-2">
-    <div class="card-body" data-name="<%= name %>" data-created="<%= createdAt %>" data-updated="<%= updatedAt %>">
-      <h5 class="card-title text-truncate"><%= name %></h5>
-      <p id="public" class="card-text text-muted" data-public="<%- public %>"><%- public ? "Public" : "Private" %></p>
-      <a id="open" href="projects/<%= _id %>" class="card-link"><i class="fas fa-edit"></a>
-      <a id="copy" href="projects/<%= _id %>/copy" class="card-link"><i class="fas fa-copy"></i></a>
-      <a id="delete" href="deleteProject('/projects/<%= _id %>')" class="card-link"><i class="fas fa-trash text-danger"></i></a>
+<div class="col" data-public="<%- public %>" data-created="<%= createdAt.toLocaleString() %>" data-updated="<%= updatedAt.toLocaleString() %>">
+  <div class="card m-1">
+    <div class="card-body">
+      <h5 class="card-title"><%= name %></h5>
+      <p class="card-text text-muted text-truncate"><%= description %></p>
+      <a title="Open project" href="projects/<%= _id %>" class="card-link"><i class="fas fa-edit"></i></a>
+      <a title="Make copy" href="projects/<%= _id %>/copy" class="card-link"><i class="fas fa-copy"></i></a>
+      <a title="Delete project" class="card-link text-danger"><i class="fas fa-trash"></i></a>
+      <% if (!public) { %><span title="Private project" class="text-success ml-3"><i class="fas fa-user-shield"></i></span><% } %>
     </div>
   </div>
 </div>
