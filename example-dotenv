@@ -1,0 +1,21 @@
+# General settings
+APP_NAME="Generic Project App"
+DATABASE="mongodb"
+PORT=5000
+DEVELOPMENT_URL="localhost"
+PRODUCTION_URL=""
+
+# Database keys
+MONGODB_PWD=""
+MONGODB_URL=""
+MONGODB_USER=""
+
+# Passport keys
+GOOGLE_ID=""
+GOOGLE_SECRET=""
+GITHUB_ID=""
+GITHUB_SECRET=""
+FACEBOOK_ID=""
+FACEBOOK_SECRET=""
+TWITTER_ID=""
+TWITTER_SECRET=""
