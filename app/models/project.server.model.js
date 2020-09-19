@@ -6,10 +6,10 @@ let ProjectSchema = new Schema({
     name: { type: String, default: "Untitled", maxlength: 25 },
     description: { type: String, default: "No description provided" },
     content: { type: String, default: "" },
-    owner: { type: ObjectId, required: true},
+    owner: { type: ObjectId, required: true, ref: "User"},
     public: { type: Boolean, default: false },
-    readAccess: [ ObjectId ],
-    writeAccess: [ ObjectId ],
+    readAccess: [{ type: ObjectId,  ref: "User"} ],
+    writeAccess: [ { type: ObjectId,  ref: "User"} ],
 }, { timestamps: true });
 
 ProjectSchema.statics.listByUser = function(userId, done) {
