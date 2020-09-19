@@ -11,16 +11,16 @@
     <div class="jumbotron text-center">
         <h1 class="display-4"><img class="logo" src="img/logo.png" /> Login</h1>
         <p>Login or Register with:</p>
-        <% if (process.env.GITHUB_ID) { %>
+        <% if (process.env.GITHUB_ID && process.env.GITHUB_SECRET) { %>
             <a href="/auth/github" class="btn btn-dark">Github</a>
         <% } %>
-        <% if (process.env.GOOGLE_ID) { %>
+        <% if (process.env.GOOGLE_ID && process.env.GOOGLE_SECRET) { %>
             <a href="/auth/google" class="btn btn-primary">Google</a>
         <% } %>        
-        <% if (process.env.TWITTER_ID) { %>
+        <% if (process.env.TWITTER_ID && process.env.TWITTER_SECRET) { %>
             <a href="/auth/twitter" class="btn btn-primary">Twitter</a>
         <% } %>
-        <% if (process.env.FACEBOOK_ID) { %>
+        <% if (process.env.FACEBOOK_ID && process.env.FACEBOOK_SECRET) { %>
             <a href="/auth/facebook" class="btn btn-primary">Facebook</a>
         <% } %>
     </div>
