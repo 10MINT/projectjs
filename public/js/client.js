@@ -1,12 +1,13 @@
-function saveProject(data) {
+function saveProject() {
     fetch(window.location.href, { 
         method: 'PUT',
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
+            name: document.querySelector('#name').value,
+            description: document.querySelector('#description').value,
             content: document.querySelector('#content').value,
-            name: document.querySelector('#nameInput').value,
             public: document.querySelector('#publicSwitch').checked
         })
     });
@@ -23,3 +24,8 @@ function deleteProject(id = window.location.href) {
         } 
     });
 }
+
+$().ready( function() {
+    $('#confirmDeleteButton').on('click', deleteProject);
+    $('#saveButton').on('click', saveProject);
+} );

@@ -2,17 +2,29 @@
 <html>
     <head>
         <%- include('head'); -%>
+        <script src="/js/projects.js"></script>
     </head>
     <body>
         <div class="container-fluid p-0">
             <%- include('header'); -%>
-            <main class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 m-1">
-                <% projects.sort(function(a,b){ %>
-                <%   return a.updatedAt > b.updatedAt %>
-                <% }).forEach(function(project){ %>
-                    <%- include('projectCard', project); %>
-                <% }); %>
+            <main id="projectList">
+                <div class="form-inline my-2 mx-4">
+                    <div class="btn-group" role="group">
+                        <button id="toggle-list" class="btn btn-light p-2"><i class="fas fa-bars"></i></button>
+                        <button id="toggle-cards" class="btn btn-dark p-2"><i class="fas fa-th-large"></i></button>
+                    </div>
+                    <input class="search form-control m-1" placeholder="Search" aria-label="Search">
+                    <button class="sort btn btn-outline-success m-1" data-sort="card-title">Sort by name</button>
+                    <button class="sort btn btn-outline-success m-1" data-sort="updated">Sort by updated</button>
+                    <button class="sort btn btn-outline-success m-1" data-sort="created">Sort by created</button>
+                </div>
+                <div class="list row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 m-1">
+                    <% projects.forEach(function(project){ %>
+                        <%- include('projectCard', project); %>
+                    <% }); %>
+                </div>
             </main>
         </div>
+        <script src="/js/list.min.js"></script>
     </body>
 </html> 
