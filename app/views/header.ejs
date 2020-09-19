@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="<%= user? "/projects": "/" %>"><img class="logo" src="/img/logo.png" alt="Project"></a>
+    <a class="navbar-brand" href="/projects"><img class="logo" src="/img/logo.png" alt="Project"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,7 +16,7 @@
               </li>
             <% } if (user && typeof project != "undefined" && project.hasWriteAccess(user._id)) { %>
               <li class="nav-item m-1">
-                  <button class="nav-link text-white btn btn-success" onclick="saveProject()">Save Project</button>
+                  <button class="nav-link text-white btn btn-success" id="saveButton">Save Project</button>
               </li>
               <li class="nav-item m-1">
                   <a class="nav-link text-white btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete Project </a>
