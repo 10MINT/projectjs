@@ -12,16 +12,16 @@
         <h1 class="display-4"><img class="logo" src="img/logo.png" /> Login</h1>
         <p>Login or Register with:</p>
         <% if (process.env.GITHUB_ID) { %>
-            <a href="/auth/github" class="btn btn-dark"><span class="fab fa-github"></span> Github</a>
+            <a href="/auth/github" class="btn btn-dark">Github</a>
         <% } %>
         <% if (process.env.GOOGLE_ID) { %>
-            <a href="/auth/google" class="btn btn-primary"><span class="fab fa-google"></span> Google</a>
+            <a href="/auth/google" class="btn btn-primary">Google</a>
         <% } %>        
         <% if (process.env.TWITTER_ID) { %>
-            <a href="/auth/twitter" class="btn btn-primary"><span class="fab fa-twitter"></span> Twitter</a>
+            <a href="/auth/twitter" class="btn btn-primary">Twitter</a>
         <% } %>
         <% if (process.env.FACEBOOK_ID) { %>
-            <a href="/auth/facebook" class="btn btn-primary"><span class="fab fa-facebook"></span> Facebook</a>
+            <a href="/auth/facebook" class="btn btn-primary">Facebook</a>
         <% } %>
     </div>
 </div>

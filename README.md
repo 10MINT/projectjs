@@ -35,7 +35,7 @@ please [write me an email📧](mailto:redpandadevs@gmail.com), so I can link you
 - DB Driver: Mongoose
 - Authentication: PassportJS
 - Template Engine: EJS
-- Frontend: Bootstrap 4 + Fontawesome 4
+- Frontend: Bootstrap 4
 - Project Schema
   - name: project name (String)
   - description: String that appears in the project card
