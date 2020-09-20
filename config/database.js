@@ -9,8 +9,8 @@ if (DEVELOPMENT) {
 }
 
 module.exports = function() {
-    let db = mongoose.connect(//DEVELOPMENT ? 
-            // 'mongodb://localhost/mongodb' :
+    let db = mongoose.connect(DEVELOPMENT ? 
+            'mongodb://localhost/mongodb' :
             `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PWD}@${process.env.MONGODB_URL}?retryWrites=true`, { useNewUrlParser: true });
     require('../app/models/project.server.model');
     require('../app/models/user.server.model');
