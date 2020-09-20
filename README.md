@@ -3,7 +3,7 @@ A framework for project/workspace centered web applications, written in NodeJS
 
 ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/10MINT/projectjs/)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/10MINT/projectjs/tree/develop)
 
 ## What
 projectjs is a starting template for web applications that require user projects. 
