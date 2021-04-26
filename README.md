@@ -3,12 +3,12 @@ A framework for project/workspace centered web applications, written in NodeJS
 
 ![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/10MINT/projectjs/tree/develop)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/10MINT/projectjs/tree/master)
 
 ## What
 projectjs is a starting template for web applications that require user projects. 
 A project can be anything, if yours is saved as a string, you can start right away.
-A login screen and projects overview is already  implemented.
+A login screen and projects overview is already implemented.
 
 ## Why
 I figured that many services are centered around the idea of user projects, but I 
